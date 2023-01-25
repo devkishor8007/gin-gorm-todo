@@ -1,0 +1,10 @@
+export GO111MODULE="on" 
+go mod init github.com/devkishor8007/go-backend
+go get github.com/gin-gonic/gin gorm.io/gorm
+
+issue main.go:7:2: cannot find package "github.com/devkishor8007/go-backend/controllers" in any of:
+        /usr/local/go/src/github.com/devkishor8007/ac/controllers (from $GOROOT)
+        /Users/apple/go/src/github.com/devkishor8007/ac/controllers (from $GOPATH)
+
+solution
+$ go env -w  GO111MODULE=auto
