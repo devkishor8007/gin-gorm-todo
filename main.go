@@ -9,6 +9,7 @@ import (
 
 func main() {
 	r := gin.Default()
+	r.SetTrustedProxies(nil)
 
 	// connect database
 	models.Init()
